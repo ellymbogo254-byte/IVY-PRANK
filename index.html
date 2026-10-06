@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>For Ivy 😂❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #4b164c, #160018);
+      color: white;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .screen {
+      display: none;
+      width: 90%;
+      max-width: 500px;
+      padding: 30px 20px;
+      animation: fadeIn 0.7s ease;
+    }
+
+    .screen.active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 27px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    button {
+      border: none;
+      border-radius: 30px;
+      padding: 15px 28px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 10px;
+      transition: 0.2s;
+    }
+
+    .start {
+      background: #ff4fa3;
+      color: white;
+      box-shadow: 0 0 20px rgba(255, 79, 163, 0.6);
+    }
+
+    .yes {
+      background: #38d66b;
+      color: white;
+    }
+
+    .no {
+      background: #ff5252;
+      color: white;
+      position: absolute;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -30px;
+      font-size: 25px;
+      animation: floatUp 5s linear forwards;
+      pointer-events: none;
+    }
+
+    .confetti {
+      position: fixed;
+      top: -20px;
+      font-size: 25px;
+      animation: fall 3s linear forwards;
+      pointer-events: none;
+    }
+
+    .big-heart {
+      font-size: 80px;
+      animation: heartbeat 1.2s infinite;
+    }
+
+    .funny {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+
+      to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fall {
+      from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+
+      to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SCREEN 1 -->
+  <div class="screen active" id="screen1">
+
+    <div class="big-heart">👀❤️</div>
+
+    <h1>Hey Ivy...</h1>
+
+    <p>
+      I have something VERY serious to ask you.
+      <br><br>
+      Please don't panic. 😂
+    </p>
+
+    <button class="start" onclick="nextScreen()">
+      I'm Ready 👀
+    </button>
+
+  </div>
+
+
+  <!-- SCREEN 2 -->
+  <div class="screen" id="screen2">
+
+    <h1>🚨 IMPORTANT QUESTION 🚨</h1>
+
+    <p>
+      Ivy, after conducting approximately
+      <b>0 scientific studies</b>...
+      😂
+    </p>
+
+    <h2>
+      Would you date me? 👀❤️
+    </h2>
+
+    <button class="yes" onclick="sayYes()">
+      YES 😍
+    </button>
+
+    <button class="no" id="noButton"
+            onmouseover="moveNo()"
+            onclick="moveNo()">
+      NO 😂
+    </button>
+
+  </div>
+
+
+  <!-- SCREEN 3 -->
+  <div class="screen" id="screen3">
+
+    <div class="big-heart">😂❤️</div>
+
+    <h1>WAIT... WHAT?!</h1>
+
+    <p class="funny">
+      YOU SAID YES?! 😭😂
+    </p>
+
+    <p>
+      I knew you wouldn't be able to resist. 😌
+      <br><br>
+      Don't worry, Ivy...
+      <br>
+      this application was completely unofficial. 😂
+    </p>
+
+    <button class="start" onclick="nextScreen()">
+      Continue 😂
+    </button>
+
+  </div>
+
+
+  <!-- SCREEN 4 -->
+  <div class="screen" id="screen4">
+
+    <h1>🎉 CONGRATULATIONS IVY 🎉</h1>
+
+    <p>
+      You have officially been selected for the position of:
+    </p>
+
+    <h2>
+      💕 MY JOKE GIRLFRIEND 💕
+    </h2>
+
+    <p>
+      <b>Salary:</b> 0 KES 😂
+      <br>
+      <b>Working hours:</b> 24/7 annoying each other
+      <br>
+      <b>Benefits:</b> Unlimited friendship ❤️
+      <br>
+      <b>Promotion:</b> Absolutely impossible 😂
+    </p>
+
+    <button class="start" onclick="nextScreen()">
+      Read Your Contract 📜
+    </button>
+
+  </div>
+
+
+  <!-- SCREEN 5 -->
+  <div class="screen" id="screen5">
+
+    <h1>📜 THE CONTRACT</h1>
+
+    <p>
+      By pressing YES, Ivy agrees to:
+    </p>
+
+    <p>
+      😂 Laugh at my terrible jokes
+      <br><br>
+      😂 Tolerate my nonsense
+      <br><br>
+      ❤️ Remain an amazing bestie
+      <br><br>
+      🤝 Continue being my partner in crime
+    </p>
+
+    <h2>Deal? 😏</h2>
+
+    <button class="start" onclick="finalScreen()">
+      I ACCEPT 😂❤️
+    </button>
+
+  </div>
+
+
+  <!-- FINAL SCREEN -->
+  <div class="screen" id="screen6">
+
+    <div class="big-heart">❤️</div>
+
+    <h1>Okay Ivy... 😂</h1>
+
+    <p>
+      Before you start getting excited...
+    </p>
+
+    <h2>
+      YOU GOT PRANKED! 😂😂😂
+    </h2>
+
+    <p>
+      You're my bestie, and honestly,
+      I wouldn't trade our friendship for anything.
+      ❤️
+      <br><br>
+      Thanks for playing along, Ivy. 😂
+    </p>
+
+    <h2>Bestie for life 🤝❤️</h2>
+
+  </div>
+
+
+  <script>
+
+    let currentScreen = 1;
+
+    function showScreen(number) {
+
+      document.querySelectorAll(".screen").forEach(screen => {
+        screen.classList.remove("active");
+      });
+
+      document.getElementById("screen" + number)
+        .classList.add("active");
+
+      currentScreen = number;
+    }
+
+
+    function nextScreen() {
+
+      if (currentScreen < 6) {
+        showScreen(currentScreen + 1);
+      }
+
+    }
+
+
+    function finalScreen() {
+
+      showScreen(6);
+
+      celebrate();
+
+    }
+
+
+    function sayYes() {
+
+      showScreen(3);
+
+      createHearts();
+
+    }
+
+
+    function moveNo() {
+
+      const button = document.getElementById("noButton");
+
+      const maxX = window.innerWidth - button.offsetWidth - 20;
+      const maxY = window.innerHeight - button.offsetHeight - 20;
+
+      const x = Math.random() * maxX;
+      const y = Math.random() * maxY;
+
+      button.style.left = x + "px";
+      button.style.top = y + "px";
+
+    }
+
+
+    function createHearts() {
+
+      for (let i = 0; i < 15; i++) {
+
+        setTimeout(() => {
+
+          const heart = document.createElement("div");
+
+          heart.className = "heart";
+          heart.innerHTML = "❤️";
+
+          heart.style.left =
+            Math.random() * 100 + "vw";
+
+          heart.style.animationDuration =
+            (3 + Math.random() * 3) + "s";
+
+          document.body.appendChild(heart);
+
+          setTimeout(() => {
+            heart.remove();
+          }, 6000);
+
+        }, i * 150);
+
+      }
+
+    }
+
+
+    function celebrate() {
+
+      const emojis = ["🎉", "🎊", "❤️", "😂", "✨", "🥳"];
+
+      for (let i = 0; i < 40; i++) {
+
+        setTimeout(() => {
+
+          const confetti = document.createElement("div");
+
+          confetti.className = "confetti";
+
+          confetti.innerHTML =
+            emojis[Math.floor(Math.random() * emojis.length)];
+
+          confetti.style.left =
+            Math.random() * 100 + "vw";
+
+          confetti.style.animationDuration =
+            (2 + Math.random() * 3) + "s";
+
+          document.body.appendChild(confetti);
+
+          setTimeout(() => {
+            confetti.remove();
+          }, 5000);
+
+        }, i * 70);
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
